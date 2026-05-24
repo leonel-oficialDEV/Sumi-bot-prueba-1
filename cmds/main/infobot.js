@@ -68,6 +68,8 @@ export default {
 
 > \`Enlace:\` ${link}`.trim()
 
+      const isVideo = banner.includes('.mp4') || banner.includes('.gif') || banner.includes('.webm');
+
       const menu = message
       const contextBase = {
         mentionedJid: null,
