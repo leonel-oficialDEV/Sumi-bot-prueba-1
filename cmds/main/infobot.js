@@ -1,4 +1,5 @@
 import os from 'os';
+import { prepareWAMessageMedia } from '@whiskeysockets/baileys';
 
 function rTime(seconds) {
   seconds = Number(seconds)
@@ -82,7 +83,7 @@ export default {
       } else {
         await client.sendMessage(m.chat, { 
           text: menu.trim(), 
-          linkPreview: link && banner ? (await prepareWAMessageMedia({ image: { url: banner } }, { upload: sock.waUploadToServer, mediaTypeOverride: 'thumbnail-link' }).then(({ imageMessage }) => ({ 'canonical-url': link, 'matched-text': link, title: botname, description: dev, jpegThumbnail: imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined, highQualityThumbnail: imageMessage || undefined }))) : undefined, 
+          linkPreview: link && banner ? (await prepareWAMessageMedia({ image: { url: banner } }, { upload: client.waUploadToServer, mediaTypeOverride: 'thumbnail-link' }).then(({ imageMessage }) => ({ 'canonical-url': link, 'matched-text': link, title: botname, description: dev, jpegThumbnail: imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined, highQualityThumbnail: imageMessage || undefined }))) : undefined, 
           contextInfo: contextBase
         }, { quoted: m });
       }
