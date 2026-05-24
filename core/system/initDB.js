@@ -14,8 +14,8 @@ function initDB(m, client) {
   settings.banner ??= 'https://cdn.yuki-wabot.my.id/files/6VvE.jpeg'
   settings.icon ??= 'https://cdn.yuki-wabot.my.id/files/6VvE.jpeg'
   settings.currency ??= 'Yenes'
-  settings.namebot ??= '❤️ sumi sakurasawa ❤️'
-  settings.botname ??= '❤️ sumi sakurasawa ❤️'  
+  settings.namebot ??= '❤️sumi sakurasawa❤️'
+  settings.botname ??= '❤️sumi sakurasawa❤️'  
   settings.owner ??= '𓆩‌۫᷼ ִֶָღܾ݉͢𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑ܾ݉ ִֶָ𓆪‌‹࣭݊𓂃ⷪ ִֶָ ᷫ‹ ⷭ.࣭𓆩‌۫᷼Ⴕ۫͜𓆪‌'
 
   const user = global.db.data.users[m.sender] ||= {}
