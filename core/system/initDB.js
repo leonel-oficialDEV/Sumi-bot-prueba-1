@@ -10,7 +10,7 @@ function initDB(m, client) {
   settings.id ??= '120363324350463849@newsletter'
   settings.nameid ??= "❤️̶۫̄͟Ⓢ︎𓏲S͟u͟m͟m͟i͟𓍲̈͜𝗨̴ᥣ̥𝗍̈rᥲ̄𓊓̵̬𝐁o̸t̸❤️̶۫̄͟─"
   settings.type ??= '𓆩‌۫᷼ ִֶָღܾ݉͢𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑ܾ݉ ִֶָ𓆪‌‹࣭݊𓂃ⷪ ִֶָ ᷫ‹ ⷭ.࣭𓆩‌۫᷼Ⴕ۫͜𓆪‌'
-  settings.link ??= ''
+  settings.link ??= 'https://chat.whatsapp.com/KkATe03ILaK0Isz485V1Gd'
   settings.banner ??= 'https://cdn.yuki-wabot.my.id/files/6VvE.jpeg'
   settings.icon ??= 'https://cdn.yuki-wabot.my.id/files/6VvE.jpeg'
   settings.currency ??= 'Yenes'
