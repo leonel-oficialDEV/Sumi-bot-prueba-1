@@ -161,10 +161,9 @@ command: ['angry','enojado','enojada','bleh','bored','aburrido','aburrida','clap
     const captionText = captions[currentCommand](fromName, toName, genero)
     const caption = who !== m.sender ? `\`${fromName}.\` ${captionText} \`${toName}.\` ${getRandomSymbol()}.` : `\`${fromName}\` ${captionText} ${getRandomSymbol()}.`
     try {
-      const response = await fetch(`https://api.stellarwa.xyz/sfw/interaction?inter=${currentCommand}`)
-      const json = await response.json()
-      const { result } = json
-      await client.sendMessage(m.chat, { video: { url: result }, gifPlayback: true, caption, mentions: [who, m.sender] }, { quoted: m })
+    const response = await fetch(`https://api.stellarwa.xyz/sfw/interaction?inter=${currentCommand}`)
+    const videoBuffer = await response.buffer()
+    await client.sendMessage(m.chat, { video: videoBuffer, gifPlayback: true, caption, mentions: [who, m.sender] }, { quoted: m })
     } catch (e) {
     await m.reply(`> An unexpected error occurred while executing command *${usedPrefix + command}*. Please try again or contact support if the issue persists.\n> [Error: *${e.message}*]`)
     }
